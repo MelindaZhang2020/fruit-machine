@@ -1,5 +1,6 @@
 // Slots Display 
 const slotsContents = [[0,0,0],[255,255,255],[0,128,0],[255,255,0]]
+let moneyBag = 20;
 let machineBank = 50;
 function pickRandomColor() {
   return slotsContents[Math.floor(Math.random()*slotsContents.length)];
@@ -8,8 +9,25 @@ function pickRandomColor() {
 function showWinMessage() {
   const msg = document.getElementById('win');
   msg.classList.remove('hidden');
+  msg.innerHTML = `Jackpot! Congratulations! You have won $`+ machineBank;
 }
-
+function restart(){
+  let timeLeft = 10;
+      const countdownElement = document.getElementById('countdown');
+      const timerId = setInterval(updateCountdown, 1000)
+      function updateCountdown() {
+        if(timeLeft == -1){
+          clearTimeout(timerId);
+        } else {
+        countdownElement.classList.remove('hidden');
+        countdownElement.innerHTML = 'Restart in' + ' ' + timeLeft ;
+        timeLeft--;
+        }
+      }
+      setTimeout(() => {
+        location.reload();
+    }, 10000);
+}
 function play() {
   const slot1 = pickRandomColor();
   const slot2 = pickRandomColor();
@@ -31,25 +49,20 @@ function play() {
   let win = ifAllEqual(colorValue);
   if (win) {
       showWinMessage();
-      let timeLeft = 10;
-      const countdownElement = document.getElementById('countdown');
-      const timerId = setInterval(updateCountdown, 1000)
-      function updateCountdown() {
-        if(timeLeft == -1){
-          clearTimeout(timerId);
-        } else {
-        countdownElement.classList.remove('hidden');
-        countdownElement.innerHTML = 'Restart in' + ' ' + timeLeft ;
-        timeLeft--;
-        }
-      }
-      setTimeout(() => {
-        location.reload();
-    }, 10000);
+      restart();
+      
   } else {
-    let moneyBag = 20;
+    const bag = document.getElementById('money-bag');
+    bag.classList.remove('hidden');
     moneyBag--;
-    machineBank++;
+    if(moneyBag == -1){
+      alert("You don't have enough money to play! Game is restarting in 10 seconds")
+      restart()
+    } else {
+      bag.innerHTML = `$` + ' ' + moneyBag;
+      machineBank++;
+    }
+    
   }
 }
 const playButton = document.getElementById('play');
