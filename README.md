@@ -111,3 +111,11 @@ Although the design part of this challenge isn't very important, I still picked 
 ## Testing
 
 ## Credits
+
+- stack overflow 
+
+[Random Color From Array](https://stackoverflow.com/questions/14949011/random-color-from-array)
+
+- youtube 
+
+[Slot Machine game](https://www.youtube.com/watch?v=QdnzQTGF1xc)

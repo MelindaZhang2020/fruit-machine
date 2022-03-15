@@ -16,39 +16,41 @@
     <div class="container">
         <div class="flex-center flex-column">
             <h1>The Ultimate Fruit Machine</h1>
-    <button class="btn btn-warning" id="rules"type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">RULES</button>
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          Press play button to play. £2 for each play. You win the game with all the money in the machine if all four slots match with the same color. 
-        </div>
-      </div>
-    <div id="result">
-        <div class="message-wrap">
-            <div id="win">Jackpot! Congratulation! You have won £ 10!</div>
-        </div>
-        <div class="message-wrap">
-            <div id="lose">You lost! Try Again!</div>   
+            <!-- Game Rules -->
+            <button class="btn btn-warning" id="rules"type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">RULES</button>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                Press play button to play. You have £20 in your money bag. It costs £2 for each play. You win the game with all the money in the machine if all four slots match with the same color. The game is over when you spend all the money in your money bag!
+                </div>
+            </div>
+            <!-- Win/lose Display -->
+            <div id="result">
+                <div class="message-wrap">
+                    <div id="win">Jackpot! Congratulation! You have won £ 10!</div>
+                </div>
+                <div class="message-wrap">
+                    <div id="lose">You lost! Try Again!</div>   
+                </div>
+            </div>
+            <!-- Slots Display -->
+            <div class="slots-container">
+                <div class="slots" id="slot-1">
+                    <div class="color-wrapper"></div>
+                </div>
+                <div class="slots" id="slot-2">
+                    <div class="color-wrapper"></div>
+                </div>
+                <div class="slots" id="slot-3">
+                    <div class="color-wrapper"></div>
+                </div>
+                <div class="slots" id="slot-4">
+                    <div class="color-wrapper"></div>
+                </div>
+            </div>
+            <!-- Play Game Button -->
+            <button class="btn btn-warning" id="play">PLAY</button>
         </div>
     </div>
-    <div class="slots-container">
-        <div class="slots" id="slot-1">
-            <div class="color-wrapper"></div>
-        </div>
-        <div class="slots" id="slot-2">
-            <div class="color-wrapper"></div>
-        </div>
-        <div class="slots" id="slot-3">
-            <div class="color-wrapper"></div>
-        </div>
-        <div class="slots" id="slot-4">
-            <div class="color-wrapper"></div>
-        </div>
-    </div>
-        <button class="btn btn-warning" id="play">PLAY</button>
-        </div>
-
-    </div>
-    
     <!-- script -->
     <script src="script.js"></script>
 </body>
