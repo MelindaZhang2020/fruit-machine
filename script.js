@@ -65,7 +65,7 @@ function play() {
     bag.classList.remove('hidden');
     moneyBag--;
     // when the money bag is running out of money, alert the user! and give option to restart the game
-    if(moneyBag == 0){
+    if(moneyBag == -1){
       alert("You don't have enough money to play! Press 'ok' to start again!")
       moneyBag = 20;
       restart();
