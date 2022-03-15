@@ -1,4 +1,4 @@
-# Fruit Machine
+# The Ultimate Color Matching Machine
 
 Phorest Graduate Programme Technical Challenge
 
@@ -115,6 +115,8 @@ Although the design part of this challenge isn't very important, I still picked 
 - stack overflow 
 
 [Random Color From Array](https://stackoverflow.com/questions/14949011/random-color-from-array)
+
+[Check if all values of array are equal](https://stackoverflow.com/questions/14832603/check-if-all-values-of-array-are-equal)
 
 - youtube 
 
