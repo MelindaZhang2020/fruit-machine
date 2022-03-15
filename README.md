@@ -60,7 +60,7 @@ The project can be divided into four sections:
 
 [Credits](#credits)
 
-## Livesite
+## [Livesite](https://melindazhang2020.github.io/ultimate-color-matching-machine/)
 
 ## UX
 
